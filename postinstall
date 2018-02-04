@@ -1,0 +1,11 @@
+#!/bin/bash
+
+chown="/usr/sbin/chown"
+chmod="/bin/chmod"
+
+${chown} -R root:gaussian /Applications/g16/
+${chown} -R root:gaussian /Applications/gv/
+${chmod} -R 770 /Applications/g16/
+${chmod} -R 770 /Applications/gv/
+
+exit

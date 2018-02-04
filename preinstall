@@ -1,0 +1,15 @@
+#!/bin/bash
+
+dseditgroup="/usr/sbin/dseditgroup"
+rm="/bin/rm"
+
+${dseditgroup} -o create gaussian
+
+# delete old versions of Gaussian, if present
+
+${rm} -rf "/Applications/gv/"
+${rm} -rf "/Applications/g09/"
+${rm} -rf "/usr/local/outset/login-once/gaussian_setup.sh"
+${rm} -rf "/usr/local/outset/login-once/gaussian.sh"
+
+exit 0
